@@ -23,6 +23,7 @@ module.exports = {
 
       bg_dark: "#0D1F2D",
       text_light: "#66d6ff",
+      text_light: "#66d6ff",
     },
 
     extend: {},
