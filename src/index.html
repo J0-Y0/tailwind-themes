@@ -10,23 +10,27 @@
 
 <body class="  bg-bg_dark text-text_light font-serif h-full overflow-hidden">
     <div class=" flex flex-row justify-between">
-        <aside class=" h-screen  border  rounded-lg p-3  border-primary  basis-2/12 ">
+        <aside class="relative h-screen  border  rounded-lg p-3  border-primary  basis-2/12 ">
 
-            <div class="relative border flex  flex-col justify-center px-7 pt-5 pb-2 rounded-ss-lg ">
-                <div class="absolute    border p-2   -end-2 -top-2   rounded-full  bg-bg_dark border-primary ">
-                    <img class=" h-8" src="../asset/logo_2.png" alt="" srcset="">
+            <div class="relative border flex flex-col items-center px-7 pt-5 pb-2 rounded-ss-lg bg-gray-50">
+                <!-- Profile Icon -->
+                <div class="absolute border p-2 -end-2 -top-2 rounded-full bg-bg_dark border-primary">
+                    <img class="h-8" src="../asset/logo_2.png" alt="Logo">
                 </div>
-                <div class="p-3  rounded-full overflow-hidden">
-
-                    <img src="../asset/my_pic.png" alt="my-pic">
+                <!-- Profile Image -->
+                <div class="flex justify-center overflow-hidden">
+                    <img class="transition ease-in-out duration-700 transform hover:scale-150 h-24 sm:h-28 rounded-lg"
+                        src="../asset/my_pic.png" alt="Profile Picture">
                 </div>
-                <h6 class=" text-center">Yosef Emyayu</h6>
-                <p class=" text-center text-secondary">Senior web developer</p>
-                <div class=" border h-1"></div>
-                <div class=" border h-1"></div>
+                <!-- Name and Title -->
+                <h6 class="text-center font-semibold text-lg mt-2">Yosef Emyayu</h6>
+                <p class="text-center text-secondary text-sm">Senior Web Developer</p>
+                <!-- Decorative Lines -->
+                <div class="border h-1 my-2 bg-primary"></div>
+                <!-- <div class="border h-1 bg-primary"></div> -->
             </div>
 
-            <div class="  border-t-2   border-b-2  my-5 text-xl flex align-baseline pt-2 gap-2">
+            <div class="  border-t-2   border-b-2  mt-5 mb-2 text-xl flex align-baseline pt-2 gap-2">
                 <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                     <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -38,7 +42,7 @@
                 Contact
             </div>
 
-            <div class=" text-quinary  text-sm">
+            <div class=" text-quinary   text-sm">
                 <div class="py-1 ps-2 flex justify-between">
                     <svg class=" border-e-2 pe-1" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"
                         height="20px" width="20px">
@@ -102,12 +106,12 @@
                                 class=" fill-quinary"></path>
                         </g>
                     </svg>
-                    www.yosef.pythonanywhere.com
+                    yosef.pythonanywhere.com
                 </div>
 
             </div>
 
-            <div class="  border-t-2   border-b-2  my-5 text-xl flex align-baseline pt-2 gap-2">
+            <div class="  border-t-2   border-b-2  my-2 text-xl flex align-baseline pt-2 gap-2">
 
                 <svg class="main-icon" height="25" width="30" version="1.1" id="Capa_1"
                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 490 490"
@@ -132,112 +136,174 @@
             </div>
             <div class=" text-quinary  text-sm">
                 <div class=" line"></div>
-                <div class="row skils">
-                    <div class="col-7">
-                        <span class="main-text">
-                            Front-end</span>
-                        <ul>
-
-                            <li> HTML/CSS/SCSS</li>
-                            <li> JavaScript/React/Figma</li>
-                            <li> Bootstrap/Material UI</li>
+                <div class="flex overflow-hidden flex-col    ">
 
 
-                        </ul>
-                        <span class="main-text">Backend:</span>
-                        <ul>
-                            <li>Python/Django </li>
-                            <li>REST API </li>
-                            <li>Java/javafx</li>
-                        </ul>
+                    <div class="flex justify-between ">
+                        <div class="border-b border-slate-200">
+                            <button onclick="toggleAccordion(1)"
+                                class="w-full flex justify-between items-center py-2 text-slate-800">
+                                <span>Front-end</span>
+                                <span id="icon-1" class="text-slate-800 transition-transform duration-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                                        class="w-4 h-4">
+                                        <path fill-rule="evenodd"
+                                            d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </span>
+                            </button>
+                            <div id="content-1"
+                                class="accordion max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                                <div class="pb-5 text-sm text-slate-500">
+                                    <span> tml|css|scss</span>
+                                    <span>tailwind|Figma</span>
+                                    <span> javaScript|React</span>
+                                    <span> bootstrap|Material UI</span>
 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-b border-slate-200">
+                            <button onclick="toggleAccordion(2)"
+                                class="w-full flex justify-between items-center py-2 text-slate-800">
+                                <span>Back-end</span>
+                                <span id="icon-2" class="text-slate-800 transition-transform duration-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                                        class="w-4 h-4">
+                                        <path fill-rule="evenodd"
+                                            d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </span>
+                            </button>
+                            <div id="content-2"
+                                class="accordion max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                                <div class="pb-5 text-sm text-slate-500">
+                                    <ul>
+                                        <li>Python/Django </li>
+                                        <li>REST API </li>
+                                        <li>Java/javafx</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-5">
-                        <span class="main-text">
-                            DevOps & Tools: </span>
-                        <ul>
-                            <li>Git/Github/gitlab</li>
-                            <li>Docker </li>
-                            <li>JIRA/Notion</li>
-                        </ul>
-                        <span class="main-text">Database:</span>
-                        <ul>
+                    <div class="flex justify-between">
+                        <div class="border-b border-slate-200">
+                            <button onclick="toggleAccordion(3)"
+                                class="w-full flex justify-between items-center py-2 text-slate-800">
+                                <span>DevOps & Tools:</span>
+                                <span id="icon-3" class="text-slate-800 transition-transform duration-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                                        class="w-4 h-4">
+                                        <path fill-rule="evenodd"
+                                            d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </span>
+                            </button>
+                            <div id="content-3"
+                                class="accordion max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                                <div class="pb-5 text-sm text-slate-500">
+                                    <li>Git|Github|gitlab</li>
+                                    <li>JIRA|Notion</li>
+                                    <li>Docker </li>
 
-                            <li>MySQL </li>
-                            <li>PostgreSQL </li>
-                            <li>Oracle DB</li>
-
-
-                        </ul>
-
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-b border-slate-200">
+                            <button onclick="toggleAccordion(4)"
+                                class="w-full flex justify-between items-center py-2 text-slate-800">
+                                <span>Database</span>
+                                <span id="icon-4" class="text-slate-800 transition-transform duration-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                                        class="w-4 h-4">
+                                        <path fill-rule="evenodd"
+                                            d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </span>
+                            </button>
+                            <div id="content-4"
+                                class="accordion max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                                <div class="pb-5 text-sm text-slate-500">
+                                    <li>MySQL </li>
+                                    <li>PostgreSQL </li>
+                                    <li>Oracle DB</li>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
+
                 </div>
 
-                <div class=" line"></div>
-                <div class="d-flex justify-content-between">
-                    <a href="http://" target="_blank" rel="linkedin">
-                        <svg fill="#AFFFFF" height="30px" width="30px" version="1.1" id="Layer_1"
-                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                            viewBox="-143 145 512 512" xml:space="preserve" stroke="#AFFFFF">
-                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                            <g id="SVGRepo_iconCarrier">
-                                <path
-                                    d="M113,145c-141.4,0-256,114.6-256,256s114.6,256,256,256s256-114.6,256-256S254.4,145,113,145z M41.4,508.1H-8.5V348.4h49.9 V508.1z M15.1,328.4h-0.4c-18.1,0-29.8-12.2-29.8-27.7c0-15.8,12.1-27.7,30.5-27.7c18.4,0,29.7,11.9,30.1,27.7 C45.6,316.1,33.9,328.4,15.1,328.4z M241,508.1h-56.6v-82.6c0-21.6-8.8-36.4-28.3-36.4c-14.9,0-23.2,10-27,19.6 c-1.4,3.4-1.2,8.2-1.2,13.1v86.3H71.8c0,0,0.7-146.4,0-159.7h56.1v25.1c3.3-11,21.2-26.6,49.8-26.6c35.5,0,63.3,23,63.3,72.4V508.1z ">
-                                </path>
-                            </g>
-                        </svg>
-                    </a>
-                    <a href="http://" target="_blank" rel="tweeter">
-                        <svg width="30px" height="30px" viewBox="0 -0.5 24 24" id="meteor-icon-kit__solid-github"
-                            fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                            <g id="SVGRepo_iconCarrier">
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M12.2047 0.00001C6.56031 -0.005731 1.74628 4.08615 0.842541 9.6577C-0.061195 15.2293 3.2126 20.6331 8.56941 22.4118C9.14823 22.5177 9.35294 22.1577 9.35294 21.8541C9.35294 21.5506 9.35294 20.8588 9.35294 19.8988C6.14117 20.5977 5.46353 18.3529 5.46353 18.3529C5.25046 17.6572 4.79779 17.0595 4.18588 16.6659C3.14823 15.96 4.27059 15.96 4.27059 15.96C5.00761 16.0641 5.65578 16.5014 6.02823 17.1459C6.34368 17.7179 6.87393 18.1406 7.50179 18.3208C8.12965 18.5009 8.8034 18.4236 9.37411 18.1059C9.41842 17.5252 9.66876 16.9794 10.08 16.5671C7.5247 16.2777 4.84235 15.2894 4.84235 10.92C4.82481 9.7786 5.24688 8.67412 6.02117 7.8353C5.67632 6.84285 5.71662 5.7571 6.13412 4.79295C6.13412 4.79295 7.10117 4.48236 9.29647 5.97177C11.1816 5.45419 13.1713 5.45419 15.0565 5.97177C17.2518 4.48236 18.2118 4.79295 18.2118 4.79295C18.6351 5.74689 18.6854 6.82486 18.3529 7.81412C19.1272 8.65294 19.5493 9.7574 19.5318 10.8988C19.5318 15.3177 16.8424 16.2847 14.28 16.5459C14.8359 17.1047 15.1218 17.8774 15.0635 18.6635C15.0635 20.2024 15.0635 21.4447 15.0635 21.8188C15.0635 22.1929 15.2682 22.4824 15.8541 22.3694C21.1473 20.5447 24.3569 15.1728 23.4554 9.6469C22.5539 4.1211 17.8034 0.04779 12.2047 0.00001z"
-                                    fill="#AFFFFF"></path>
-                            </g>
-                        </svg>
-                    </a>
-                    <a href="http://" target="_blank" rel="github">
-                        <svg fill="#AFFFFF" width="30px" height="30px" viewBox="0 0 32 32" version="1.1"
-                            xmlns="http://www.w3.org/2000/svg" stroke="#AFFFFF">
-                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                            <g id="SVGRepo_iconCarrier">
-                                <title>telegram</title>
-                                <path
-                                    d="M22.122 10.040c0.006-0 0.014-0 0.022-0 0.209 0 0.403 0.065 0.562 0.177l-0.003-0.002c0.116 0.101 0.194 0.243 0.213 0.403l0 0.003c0.020 0.122 0.031 0.262 0.031 0.405 0 0.065-0.002 0.129-0.007 0.193l0-0.009c-0.225 2.369-1.201 8.114-1.697 10.766-0.21 1.123-0.623 1.499-1.023 1.535-0.869 0.081-1.529-0.574-2.371-1.126-1.318-0.865-2.063-1.403-3.342-2.246-1.479-0.973-0.52-1.51 0.322-2.384 0.221-0.23 4.052-3.715 4.127-4.031 0.004-0.019 0.006-0.040 0.006-0.062 0-0.078-0.029-0.149-0.076-0.203l0 0c-0.052-0.034-0.117-0.053-0.185-0.053-0.045 0-0.088 0.009-0.128 0.024l0.002-0.001q-0.198 0.045-6.316 4.174c-0.445 0.351-1.007 0.573-1.619 0.599l-0.006 0c-0.867-0.105-1.654-0.298-2.401-0.573l0.074 0.024c-0.938-0.306-1.683-0.467-1.619-0.985q0.051-0.404 1.114-0.827 6.548-2.853 8.733-3.761c1.607-0.853 3.47-1.555 5.429-2.010l0.157-0.031zM15.93 1.025c-8.302 0.020-15.025 6.755-15.025 15.060 0 8.317 6.742 15.060 15.060 15.060s15.060-6.742 15.060-15.060c0-8.305-6.723-15.040-15.023-15.060h-0.002q-0.035-0-0.070 0z">
-                                </path>
-                            </g>
-                        </svg>
-                    </a>
-                    <a href="http://" target="_blank" rel="tewitter">
-                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
-                            width="30" height="30" x="0" y="0" viewBox="0 0 1227 1227"
-                            style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
-                            <g>
-                                <path
-                                    d="M613.5 0C274.685 0 0 274.685 0 613.5S274.685 1227 613.5 1227 1227 952.315 1227 613.5 952.315 0 613.5 0z"
-                                    fill="#afffff" opacity="1" data-original="#000000" class=""></path>
-                                <path fill="#0d1f2d"
-                                    d="m680.617 557.98 262.632-305.288h-62.235L652.97 517.77 470.833 252.692H260.759l275.427 400.844-275.427 320.142h62.239l240.82-279.931 192.35 279.931h210.074L680.601 557.98zM345.423 299.545h95.595l440.024 629.411h-95.595z"
-                                    opacity="1" data-original="#ffffff" class=""></path>
-                            </g>
-                        </svg>
-                    </a>
-                </div>
-                <div class=" line"></div>
+
             </div>
 
 
-            <div class=" border h-0 mb-5"></div>
-            <div class=" border h-0 my-5"></div>
+            <!-- <div class=" border h-0 my-5"></div> -->
 
 
+            <!-- <div class=" border h-0 mb-5  "></div> -->
 
+            <div class="flex justify-between absolute px-5 py-2 left-0 right-0 bottom-0">
 
+                <a href="http://" target="_blank" rel="linkedin">
+                    <svg fill="#AFFFFF" height="30px" width="30px" version="1.1" id="Layer_1"
+                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        viewBox="-143 145 512 512" xml:space="preserve" stroke="#AFFFFF">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path
+                                d="M113,145c-141.4,0-256,114.6-256,256s114.6,256,256,256s256-114.6,256-256S254.4,145,113,145z M41.4,508.1H-8.5V348.4h49.9 V508.1z M15.1,328.4h-0.4c-18.1,0-29.8-12.2-29.8-27.7c0-15.8,12.1-27.7,30.5-27.7c18.4,0,29.7,11.9,30.1,27.7 C45.6,316.1,33.9,328.4,15.1,328.4z M241,508.1h-56.6v-82.6c0-21.6-8.8-36.4-28.3-36.4c-14.9,0-23.2,10-27,19.6 c-1.4,3.4-1.2,8.2-1.2,13.1v86.3H71.8c0,0,0.7-146.4,0-159.7h56.1v25.1c3.3-11,21.2-26.6,49.8-26.6c35.5,0,63.3,23,63.3,72.4V508.1z ">
+                            </path>
+                        </g>
+                    </svg>
+                </a>
+                <a href="http://" target="_blank" rel="tweeter">
+                    <svg width="30px" height="30px" viewBox="0 -0.5 24 24" id="meteor-icon-kit__solid-github"
+                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M12.2047 0.00001C6.56031 -0.005731 1.74628 4.08615 0.842541 9.6577C-0.061195 15.2293 3.2126 20.6331 8.56941 22.4118C9.14823 22.5177 9.35294 22.1577 9.35294 21.8541C9.35294 21.5506 9.35294 20.8588 9.35294 19.8988C6.14117 20.5977 5.46353 18.3529 5.46353 18.3529C5.25046 17.6572 4.79779 17.0595 4.18588 16.6659C3.14823 15.96 4.27059 15.96 4.27059 15.96C5.00761 16.0641 5.65578 16.5014 6.02823 17.1459C6.34368 17.7179 6.87393 18.1406 7.50179 18.3208C8.12965 18.5009 8.8034 18.4236 9.37411 18.1059C9.41842 17.5252 9.66876 16.9794 10.08 16.5671C7.5247 16.2777 4.84235 15.2894 4.84235 10.92C4.82481 9.7786 5.24688 8.67412 6.02117 7.8353C5.67632 6.84285 5.71662 5.7571 6.13412 4.79295C6.13412 4.79295 7.10117 4.48236 9.29647 5.97177C11.1816 5.45419 13.1713 5.45419 15.0565 5.97177C17.2518 4.48236 18.2118 4.79295 18.2118 4.79295C18.6351 5.74689 18.6854 6.82486 18.3529 7.81412C19.1272 8.65294 19.5493 9.7574 19.5318 10.8988C19.5318 15.3177 16.8424 16.2847 14.28 16.5459C14.8359 17.1047 15.1218 17.8774 15.0635 18.6635C15.0635 20.2024 15.0635 21.4447 15.0635 21.8188C15.0635 22.1929 15.2682 22.4824 15.8541 22.3694C21.1473 20.5447 24.3569 15.1728 23.4554 9.6469C22.5539 4.1211 17.8034 0.04779 12.2047 0.00001z"
+                                fill="#AFFFFF"></path>
+                        </g>
+                    </svg>
+                </a>
+                <a href="http://" target="_blank" rel="github">
+                    <svg fill="#AFFFFF" width="30px" height="30px" viewBox="0 0 32 32" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg" stroke="#AFFFFF">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <title>telegram</title>
+                            <path
+                                d="M22.122 10.040c0.006-0 0.014-0 0.022-0 0.209 0 0.403 0.065 0.562 0.177l-0.003-0.002c0.116 0.101 0.194 0.243 0.213 0.403l0 0.003c0.020 0.122 0.031 0.262 0.031 0.405 0 0.065-0.002 0.129-0.007 0.193l0-0.009c-0.225 2.369-1.201 8.114-1.697 10.766-0.21 1.123-0.623 1.499-1.023 1.535-0.869 0.081-1.529-0.574-2.371-1.126-1.318-0.865-2.063-1.403-3.342-2.246-1.479-0.973-0.52-1.51 0.322-2.384 0.221-0.23 4.052-3.715 4.127-4.031 0.004-0.019 0.006-0.040 0.006-0.062 0-0.078-0.029-0.149-0.076-0.203l0 0c-0.052-0.034-0.117-0.053-0.185-0.053-0.045 0-0.088 0.009-0.128 0.024l0.002-0.001q-0.198 0.045-6.316 4.174c-0.445 0.351-1.007 0.573-1.619 0.599l-0.006 0c-0.867-0.105-1.654-0.298-2.401-0.573l0.074 0.024c-0.938-0.306-1.683-0.467-1.619-0.985q0.051-0.404 1.114-0.827 6.548-2.853 8.733-3.761c1.607-0.853 3.47-1.555 5.429-2.010l0.157-0.031zM15.93 1.025c-8.302 0.020-15.025 6.755-15.025 15.060 0 8.317 6.742 15.060 15.060 15.060s15.060-6.742 15.060-15.060c0-8.305-6.723-15.040-15.023-15.060h-0.002q-0.035-0-0.070 0z">
+                            </path>
+                        </g>
+                    </svg>
+                </a>
+                <a href="http://" target="_blank" rel="tewitter">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        width="30" height="30" x="0" y="0" viewBox="0 0 1227 1227"
+                        style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
+                        <g>
+                            <path
+                                d="M613.5 0C274.685 0 0 274.685 0 613.5S274.685 1227 613.5 1227 1227 952.315 1227 613.5 952.315 0 613.5 0z"
+                                fill="#afffff" opacity="1" data-original="#000000" class=""></path>
+                            <path fill="#0d1f2d"
+                                d="m680.617 557.98 262.632-305.288h-62.235L652.97 517.77 470.833 252.692H260.759l275.427 400.844-275.427 320.142h62.239l240.82-279.931 192.35 279.931h210.074L680.601 557.98zM345.423 299.545h95.595l440.024 629.411h-95.595z"
+                                opacity="1" data-original="#ffffff" class=""></path>
+                        </g>
+                    </svg>
+                </a>
+            </div>
         </aside>
         <div class="basis-8/12">
             <nav
@@ -266,136 +332,27 @@
             <main>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam iure cum, impedit necessitatibus
                 saepe, incidunt explicabo maiores rerum eos nostrum veniam veritatis tempore. Dolorum sit cumque dolores
                 ducimus, voluptate mollitia! lorte
-                \
+                <!-- Accordion Item 1 -->
 
 
-                <div class="row skills">
-                    <div class="col-7">
-                        <span class="main-text">Front-end:</span>
-                        <ul>
-                            <li>
-                                <svg width="20" height="20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 24 24">
-                                    <path d="M3 3h18v18H3V3z" fill="#E44D26"></path>
-                                    <path d="M12 5.3v13.4l4.7-1.3L17 5.3h-5zm0 9.4V7h2.3v7.7L12 14.7z" fill="#F16529">
-                                    </path>
-                                </svg>
-                                HTML/CSS/SCSS
-                            </li>
-                            <li>
-                                <svg width="20" height="20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 24 24">
-                                    <path
-                                        d="M12 2L1.7 22.3h20.6L12 2zm.8 16.6h-1.6v-2h1.6v2zm-.1-3.2c-.2 0-.4.2-.4.4s.2.4.4.4c.3 0 .5-.2.5-.4 0-.2-.2-.4-.5-.4z"
-                                        fill="#61DAFB"></path>
-                                </svg>
-                                JavaScript/React/Figma
-                            </li>
-                            <li>
-                                <svg width="20" height="20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 24 24">
-                                    <path d="M0 0h24v24H0z" fill="none"></path>
-                                    <path d="M12 2L1.5 9l10.5 7 10.5-7L12 2zm0 13.5l7-4.5-7-4.5-7 4.5 7 4.5z"
-                                        fill="#563D7C"></path>
-                                </svg>
-                                Bootstrap/Material UI
-                            </li>
-                        </ul>
-                        <span class="main-text">Backend:</span>
-                        <ul>
-                            <li>
-                                <svg width="20" height="20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 24 24">
-                                    <path d="M0 0h24v24H0z" fill="none"></path>
-                                    <path d="M3 3h18v18H3V3zm4.8 3.6v10.8h2.4V7.2h5.6v7.2h2.4V6.6H7.8z" fill="#4B8BBE">
-                                    </path>
-                                </svg>
-                                Python/Django
-                            </li>
-                            <li>
-                                <svg width="20" height="20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 24 24">
-                                    <path
-                                        d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.6 0 12 0zm0 21.6c-5.3 0-9.6-4.3-9.6-9.6S6.7 2.4 12 2.4s9.6 4.3 9.6 9.6-4.3 9.6-9.6 9.6z"
-                                        fill="#00D8FF"></path>
-                                </svg>
-                                REST API
-                            </li>
-                            <li>
-                                <svg width="20" height="20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 24 24">
-                                    <path d="M3 3h18v18H3V3z" fill="#007396"></path>
-                                    <path
-                                        d="M12 6.8L8.8 9.2 12 11.6l3.2-2.4L12 6.8zm0 5.6l-3.2 2.4 3.2 2.4 3.2-2.4L12 12.4z"
-                                        fill="#4CAF50"></path>
-                                </svg>
-                                Java/JavaFX
-                            </li>
-                        </ul>
-                    </div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi eum quos id, ad distinctio aperiam
+                exercitationem dignissimos saepe itaque nisi officiis repellat a fugit ex illo minus consequuntur
+                quisquam debitis?Lorem ipsum dolor, sit amet consectetur adipisicing elit. A voluptates dicta minus
+                illum, velit facilis cupiditate. Voluptates consequuntur amet quia a commodi ipsum? Natus voluptatibus
+                cupiditate consectetur aliquam dignissimos excepturi?
+                <!-- Accordion Item 1 -->
 
-                    <div class="col-5">
-                        <span class="main-text">DevOps & Tools:</span>
-                        <ul>
-                            <li>
-                                <svg width="20" height="20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 24 24">
-                                    <path
-                                        d="M12 2L1.7 22.3h20.6L12 2zm.8 16.6h-1.6v-2h1.6v2zm-.1-3.2c-.2 0-.4.2-.4.4s.2.4.4.4c.3 0 .5-.2.5-.4 0-.2-.2-.4-.5-.4z"
-                                        fill="#F05033"></path>
-                                </svg>
-                                Git/GitHub/GitLab
-                            </li>
-                            <li>
-                                <svg width="20" height="20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 24 24">
-                                    <path d="M0 0h24v24H0z" fill="none"></path>
-                                    <path d="M3 3h18v18H3V3z" fill="#2496ED"></path>
-                                </svg>
-                                Docker
-                            </li>
-                            <li>
-                                <svg width="20" height="20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 24 24">
-                                    <path d="M3 3h18v18H3V3z" fill="#0052CC"></path>
-                                    <path
-                                        d="M12 6.8L8.8 9.2 12 11.6l3.2-2.4L12 6.8zm0 5.6l-3.2 2.4 3.2 2.4 3.2-2.4L12 12.4z"
-                                        fill="#2684FF"></path>
-                                </svg>
-                                JIRA/Notion
-                            </li>
-                        </ul>
-                        <span class="main-text">Database:</span>
-                        <ul>
-                            <li>
-                                <svg width="20" height="20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 24 24">
-                                    <path
-                                        d="M12 3.6c-6.6 0-12 1.8-12 4v8c0 2.2 5.4 4 12 4s12-1.8 12-4v-8c0-2.2-5.4-4-12-4zM2.4 15v-6.3c.9.6 3 1.5 5.3 2 .3 1.4.7 2.7 1.2 4.1-1.5-.3-3-.9-4.1-1.6v.7zM14 18.4c-1.8.3-3.6.3-5.3 0v-4.4c.8-.2 1.6-.5 2.4-.8.8.3 1.6.6 2.4.8v4.4zm5.3-3.4c-1.1.7-2.6 1.3-4.1 1.6.4-1.4.8-2.7 1.2-4.1 2.3-.5 4.4-1.4 5.3-2v6.3zm.3-7.1c-1.5.7-3.3 1.1-5.3 1.3-.8-.2-1.6-.4-2.4-.6v-2.4c2-.4 4-.5 5.3-.3 1.4.2 2.7.7 3.6 1.1-.3.3-.7.6-1.2.9z"
-                                        fill="#4479A1"></path>
-                                </svg>
-                                MySQL
-                            </li>
-                            <li>
-                                <svg width="20" height="20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 24 24">
-                                    <path d="M3 3h18v18H3V3z" fill="#336791"></path>
-                                </svg>
-                                PostgreSQL
-                            </li>
-                            <li>
-                                <svg width="20" height="20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 24 24">
-                                    <path
-                                        d="M12 3c-5.3 0-9.7 2-10 4.5v9c0 2.5 4.7 4.5 10 4.5s10-2 10-4.5v-9c-.3-2.5-4.7-4.5-10-4.5z"
-                                        fill="#F80000"></path>
-                                </svg>
-                                Oracle DB
-                            </li>
-                        </ul>
-                    </div>
-                </div>
 
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi eum quos id, ad distinctio aperiam
+                exercitationem dignissimos saepe itaque nisi officiis repellat a fugit ex illo minus consequuntur
+                quisquam debitis?Lorem ipsum dolor, sit amet consectetur adipisicing elit. A voluptates dicta minus
+                illum, velit facilis cupiditate. Voluptates consequuntur amet quia a commodi ipsum? Natus voluptatibus
+                cupiditate consectetur aliquam dignissimos excepturi?Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Eligendi eum quos id, ad distinctio aperiam
+                exercitationem dignissimos saepe itaque nisi officiis repellat a fugit ex illo minus consequuntur
+                quisquam debitis?Lorem ipsum dolor, sit amet consectetur adipisicing elit. A voluptates dicta minus
+                illum, velit facilis cupiditate. Voluptates consequuntur amet quia a commodi ipsum? Natus voluptatibus
+                cupiditate consectetur aliquam dignissimos excepturi?
 
             </main>
             <nav
@@ -426,8 +383,51 @@
 
     </div>
 
+    <script>
+        function toggleAccordion(index) {
+            const content = document.getElementById(`content-${index}`);
+            const icon = document.getElementById(`icon-${index}`);
 
+            // SVG for Down icon
+            const downSVG = `
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+                        <path fill-rule="evenodd" d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                      </svg>
+                    `;
 
+            // SVG for Up icon
+            const upSVG = `
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+                        <path fill-rule="evenodd" d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z" clip-rule="evenodd" />
+                      </svg>
+                    `;
+            contents = document.getElementsByClassName("accordion")
+            // Toggle the content's max-height for smooth opening and closing
+            for (var i = 0; i < contents.length; i++) {
+                if (contents[i] === content) continue
+                contents[i].style.maxHeight = "0"
+                <!-- contents[i].style.maxW = "0" -->
+                icon.innerHTML = upSVG;
+                ////ontent.classList.add("border-0", "border-gray-400", "rounded-lg", "p-3");
+
+            }
+
+            if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+                content.style.maxHeight = '0';
+                icon.innerHTML = upSVG;
+                //.classList.remove("border-0", "border-gray-400", "rounded-lg", "p-3");
+
+            } else {
+                content.style.maxHeight = content.scrollHeight + 'px';
+                content.style.width = "100%";
+                icon.innerHTML = downSVG;
+                //content.classList.add("border", "border-gray-400", "rounded-lg", "p-3");
+
+            }
+        }
+
+    </script>
+    <!-- 
     <div class=" absolute bottom-0 w-full" style="overflow: hidden;">
         <svg preserveAspectRatio="none" viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg"
             style="fill: #0d768e; width: 100%; height: 40px; transform: rotate(180deg) scaleX(-1);">
@@ -440,7 +440,11 @@
             <path
                 d="M0 0v5.63C149.93 59 314.09 71.32 475.83 42.57c43-7.64 84.23-20.12 127.61-26.46 59-8.63 112.48 12.24 165.56 35.4C827.93 77.22 886 95.24 951.2 90c86.53-7 172.46-45.71 248.8-84.81V0z" />
         </svg>
+    </div> -->
+    <div class="  border">
+
     </div>
 </body>
+
 
 </html>
