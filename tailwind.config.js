@@ -20,6 +20,7 @@ module.exports = {
       danger: "#E74C3C",
       // light: "#F8F9FA",
       // dark: "#343A40",
+      input_dark: "#2c4558",
 
       bg_dark: "#0D1F2D",
       text_light: "#66d6ff",
