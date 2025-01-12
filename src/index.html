@@ -137,108 +137,57 @@
             </div>
             <div class=" text-quinary  text-sm">
                 <div class=" line"></div>
-                <div class="flex overflow-hidden flex-col    ">
+                <div class="tabs-container w-full max-w-xl mx-auto     ">
+                    <!-- Tab Navigation -->
+                    <div class="flex  text-nowrap ">
+                        <button
+                            class=" max-w-10 overflow-hidden hover:min-w-fit hover:bg-input_dark    tab-button py-1 me-2 p-2 text-sm font-medium  hover:text-warning "
+                            id="tab1" aria-selected="true">Front-end</button>
+                        <button
+                            class=" max-w-10 overflow-hidden hover:min-w-fit hover:bg-input_dark    tab-button py-1 me-2 p-2 text-sm font-medium  hover:text-warning "
+                            id="tab2">Back-end</button>
 
+                        <button
+                            class=" max-w-10 overflow-hidden hover:min-w-fit hover:bg-input_dark    tab-button py-1 me-2 p-2 text-sm font-medium  hover:text-warning "
+                            id="tab4">Database</button><button
+                            class=" max-w-10 overflow-hidden hover:min-w-fit hover:bg-input_dark    tab-button py-1  p-2 text-sm font-medium  hover:text-warning "
+                            id="tab3">Tools
+                            <!-- DevOps & Tools -->
+                        </button>
+                    </div>
 
-                    <div class="flex justify-between ">
-                        <div class="border-b border-slate-200">
-                            <button onclick="toggleAccordion(1)"
-                                class="w-full flex justify-between items-center py-2 text-slate-800">
-                                <span>Front-end</span>
-                                <span id="icon-1" class="text-slate-800 transition-transform duration-300">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
-                                        class="w-4 h-4">
-                                        <path fill-rule="evenodd"
-                                            d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z"
-                                            clip-rule="evenodd" />
-                                    </svg>
-                                </span>
-                            </button>
-                            <div id="content-1"
-                                class="accordion max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                                <div class="pb-5 text-sm text-slate-500">
-                                    <span> tml|css|scss</span>
-                                    <span>tailwind|Figma</span>
-                                    <span> javaScript|React</span>
-                                    <span> bootstrap|Material UI</span>
-
-                                </div>
+                    <!-- Tab Content -->
+                    <div class="tab-content mt-6">
+                        <div class="tab-pane hidden" id="tab1-content">
+                            <div class="space-y-2 text-sm text-gray-600">
+                                <p>HTML | CSS | SCSS</p>
+                                <p>Tailwind | Figma</p>
+                                <p>JavaScript | React</p>
+                                <p>Bootstrap | Material UI</p>
                             </div>
                         </div>
-                        <div class="border-b border-slate-200">
-                            <button onclick="toggleAccordion(2)"
-                                class="w-full flex justify-between items-center py-2 text-slate-800">
-                                <span>Back-end</span>
-                                <span id="icon-2" class="text-slate-800 transition-transform duration-300">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
-                                        class="w-4 h-4">
-                                        <path fill-rule="evenodd"
-                                            d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z"
-                                            clip-rule="evenodd" />
-                                    </svg>
-                                </span>
-                            </button>
-                            <div id="content-2"
-                                class="accordion max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                                <div class="pb-5 text-sm text-slate-500">
-                                    <ul>
-                                        <li>Python/Django </li>
-                                        <li>REST API </li>
-                                        <li>Java/javafx</li>
-                                    </ul>
-                                </div>
+                        <div class="tab-pane hidden" id="tab2-content">
+                            <div class="space-y-2 text-sm text-gray-600">
+                                <p>Python | Django</p>
+                                <p>REST API</p>
+                                <p>Java | JavaFX</p>
+                            </div>
+                        </div>
+                        <div class="tab-pane hidden" id="tab3-content">
+                            <div class="space-y-2 text-sm text-gray-600">
+                                <p>Git | GitHub | GitLab</p>
+                                <p>JIRA | Notion</p>
+                                <p>Docker</p>
+                            </div>
+                        </div>
+                        <div class="tab-pane hidden" id="tab4-content">
+                            <div class="space-y-2 text-sm text-gray-600">
+                                <p>MySQL</p>
+                                <p>PostgreSQL</p>
+                                <p>Oracle DB</p>
                             </div>
                         </div>
                     </div>
-                    <div class="flex justify-between">
-                        <div class="border-b border-slate-200">
-                            <button onclick="toggleAccordion(3)"
-                                class="w-full flex justify-between items-center py-2 text-slate-800">
-                                <span>DevOps & Tools:</span>
-                                <span id="icon-3" class="text-slate-800 transition-transform duration-300">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
-                                        class="w-4 h-4">
-                                        <path fill-rule="evenodd"
-                                            d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z"
-                                            clip-rule="evenodd" />
-                                    </svg>
-                                </span>
-                            </button>
-                            <div id="content-3"
-                                class="accordion max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                                <div class="pb-5 text-sm text-slate-500">
-                                    <li>Git|Github|gitlab</li>
-                                    <li>JIRA|Notion</li>
-                                    <li>Docker </li>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="border-b border-slate-200">
-                            <button onclick="toggleAccordion(4)"
-                                class="w-full flex justify-between items-center py-2 text-slate-800">
-                                <span>Database</span>
-                                <span id="icon-4" class="text-slate-800 transition-transform duration-300">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
-                                        class="w-4 h-4">
-                                        <path fill-rule="evenodd"
-                                            d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z"
-                                            clip-rule="evenodd" />
-                                    </svg>
-                                </span>
-                            </button>
-                            <div id="content-4"
-                                class="accordion max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                                <div class="pb-5 text-sm text-slate-500">
-                                    <li>MySQL </li>
-                                    <li>PostgreSQL </li>
-                                    <li>Oracle DB</li>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
                 </div>
 
 
@@ -337,107 +286,143 @@
                     </li>
                 </ul>
             </nav>
+            <!--education and certificate-->
+            <main class="p-2  min-h-full flex  pt-10 sm:pt-32       align-middle gap-3">
 
 
-            <!--about page-->
-            <main class="p-2  min-h-full flex  pt-10 sm:pt-40    align-middle gap-3">
+                <div class=" basis-2/3  sm:p-15 px-3   ">
+                    <p class=" font-bold font-serif text-2xl  mb-3   ">Education</p>
+                    <p class=" font-semibold text-lg  py-2 md:text-2xl  ">
+                        B.Sc., Electrical &
+                        <span class=" text-secondary">Computer Engineering
 
-                <div class=" basis-1/4 flex ps-5 ">
-                    <img class="rounded-3xl border  p-1 transition ease-in-out duration-700 transform  hover:scale-150 h-56  sm:h-96 "
-                        src="../asset/mypic_office.jpg" alt="Profile Picture">
+
+                        </span>
+                    </p>
+                    <p class="  text-lg text-balance  text-quinary">Addis Ababa Science and Technology
+                        University
+
+                    </p>
+                    <p class="  text-lg  text-quinary">Addis Ababa, Ethiopia <br>
+                        Sep 2018 - Jun 2022
+                    </p>
+
                 </div>
-                <div class=" basis-3/4  py-10 sm:p-15 px-3">
-                    <p class=" font-extrabold text-xl sm:text-2x py-2 md:text-4xl  ">
-                        Hi, I'm <span class=" text-secondary">Yosef Emyayu</span>
-                    </p>
-                    <p class=" font-bold   text- text-lg sm:text-xl text-balance pb-10">Full Stack Engineer | Python |
-                        Django |
-                        React
-                        | Web
-                        Security
-                    </p>
-                    <p class=" text-quinary text-lg">Let's connect and build something great together! I'm passionate
-                        about
-                        creating
-                        innovative,
-                        secure web solutions and
-                        always open to new challenges.
-                    </p>
-                    <button class="transition ease-in-out duration-700
-                    
-                    
-                     my-6 p-2 px-4 font-extrabold border  text-secondary  hover:bg-secondary hover:text-bg_dark ">Let's
-                        talk</button>
-                </div>
+                <div class=" basis-1/3 flex flex-col  ">
+                    <p class=" font-bold font-serif text-2xl mb-3   ">Certifications</p>
 
+                    <ul class=" h-96 overflow-y-auto px-3  text-quinary">
+                        <li
+                            class="flex p-2 gap-2 transition ease-in-out duration-500 transform  hover:scale-105  hover:text-warning     ">
+                            <p class=" text-4xl font-extrabold p-4 rounded-lg border">AI</p>
+                            <a class="flex flex-col " href="#">
+
+                                <span class="font-bold my-2  ">AI Career Essential</span>
+                                <span> Issued by:ALX</span>
+                                <span> Issued on: aug 28, 2024</span>
+                            </a>
+
+
+
+                        </li>
+                        <li
+                            class="flex p-2 gap-2  border-b-secondary transition ease-in-out duration-500 transform  hover:scale-105  hover:text-warning ">
+                            <p class=" text-4xl font-extrabold p-4 rounded-lg border">AI</p>
+                            <a class="flex flex-col " href="#">
+
+                                <span class="font-bold my-2  ">AI Career Essential</span>
+                                <span> Issued by:ALX</span>
+                                <span> Issued on: aug 28, 2024</span>
+                            </a>
+
+
+
+                        </li>
+                        <li
+                            class="flex p-2 gap-2 transition ease-in-out duration-500 transform  hover:scale-105  hover:text-warning     ">
+                            <p class=" text-4xl font-extrabold p-4 rounded-lg border">AI</p>
+                            <a class="flex flex-col " href="#">
+
+                                <span class="font-bold my-2  ">AI Career Essential</span>
+                                <span> Issued by:ALX</span>
+                                <span> Issued on: aug 28, 2024</span>
+                            </a>
+
+
+
+                        </li>
+                        <li
+                            class="flex p-2 gap-2 transition ease-in-out duration-500 transform  hover:scale-105  hover:text-warning      ">
+                            <p class=" text-4xl font-extrabold p-4 rounded-lg border">AI</p>
+                            <a class="flex flex-col " href="#">
+
+                                <span class="font-bold my-2  ">AI Career Essential</span>
+                                <span> Issued by:ALX</span>
+                                <span> Issued on: aug 28, 2024</span>
+                            </a>
+
+
+
+                        </li>
+                        <li
+                            class="flex p-2 gap-2 transition ease-in-out duration-500 transform  hover:scale-105  hover:text-warning     ">
+                            <p class=" text-4xl font-extrabold p-4 rounded-lg border">AI</p>
+                            <a class="flex flex-col " href="#">
+
+                                <span class="font-bold my-2  ">AI Career Essential</span>
+                                <span> Issued by:ALX</span>
+                                <span> Issued on: aug 28, 2024</span>
+                            </a>
+
+
+
+                        </li>
+                        <li
+                            class="flex p-2 gap-2 transition ease-in-out duration-500 transform  hover:scale-105  hover:text-warning     ">
+                            <p class=" text-4xl font-extrabold p-4 rounded-lg border">AI</p>
+                            <a class="flex flex-col " href="#">
+
+                                <span class="font-bold my-2  ">AI Career Essential</span>
+                                <span> Issued by:ALX</span>
+                                <span> Issued on: aug 28, 2024</span>
+                            </a>
+
+
+
+                        </li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+
+                </div>
             </main>
-
         </div>
 
 
+
     </div>
 
+
+    <!-- tab script-->
     <script>
-        function toggleAccordion(index) {
-            const content = document.getElementById(`content-${index}`);
-            const icon = document.getElementById(`icon-${index}`);
+        const tabs = document.querySelectorAll('.tab-button');
+        const tabContents = document.querySelectorAll('.tab-pane');
 
-            // SVG for Down icon
-            const downSVG = `
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
-                        <path fill-rule="evenodd" d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
-                      </svg>
-                    `;
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active class from all tabs and hide all content
+                tabs.forEach(btn => btn.classList.remove('text-warning', 'border-b-2', 'border-warning', "min-w-fit"));
+                tabContents.forEach(content => content.classList.add('hidden'));
 
-            // SVG for Up icon
-            const upSVG = `
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
-                        <path fill-rule="evenodd" d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z" clip-rule="evenodd" />
-                      </svg>
-                    `;
-            contents = document.getElementsByClassName("accordion")
-            // Toggle the content's max-height for smooth opening and closing
-            for (var i = 0; i < contents.length; i++) {
-                if (contents[i] === content) continue
-                contents[i].style.maxHeight = "0"
-                <!-- contents[i].style.maxW = "0" -->
-                icon.innerHTML = upSVG;
-                ////ontent.classList.add("border-0", "border-gray-400", "rounded-lg", "p-3");
+                // Add active class to clicked tab and show corresponding content
+                tab.classList.add('text-warning', 'border-b-2', 'border-warning', "min-w-fit");
+                document.getElementById(`${tab.id}-content`).classList.remove('hidden');
+            });
+        });
 
-            }
-
-            if (content.style.maxHeight && content.style.maxHeight !== '0px') {
-                content.style.maxHeight = '0';
-                icon.innerHTML = upSVG;
-                //.classList.remove("border-0", "border-gray-400", "rounded-lg", "p-3");
-
-            } else {
-                content.style.maxHeight = content.scrollHeight + 'px';
-                content.style.width = "100%";
-                icon.innerHTML = downSVG;
-                //content.classList.add("border", "border-gray-400", "rounded-lg", "p-3");
-
-            }
-        }
-
+        // Set default tab to be active on page load
+        document.getElementById('tab1').click();
     </script>
-    <!-- 
-    <div class=" absolute bottom-0 w-full" style="overflow: hidden;">
-        <svg preserveAspectRatio="none" viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg"
-            style="fill: #0d768e; width: 100%; height: 40px; transform: rotate(180deg) scaleX(-1);">
-            <path
-                d="M0 0v46.29c47.79 22.2 103.59 32.17 158 28 70.36-5.37 136.33-33.31 206.8-37.5 73.84-4.36 147.54 16.88 218.2 35.26 69.27 18 138.3 24.88 209.4 13.08 36.15-6 69.85-17.84 104.45-29.34C989.49 25 1113-14.29 1200 52.47V0z"
-                opacity=".25" />
-            <path
-                d="M0 0v15.81c13 21.11 27.64 41.05 47.69 56.24C99.41 111.27 165 111 224.58 91.58c31.15-10.15 60.09-26.07 89.67-39.8 40.92-19 84.73-46 130.83-49.67 36.26-2.85 70.9 9.42 98.6 31.56 31.77 25.39 62.32 62 103.63 73 40.44 10.79 81.35-6.69 119.13-24.28s75.16-39 116.92-43.05c59.73-5.85 113.28 22.88 168.9 38.84 30.2 8.66 59 6.17 87.09-7.5 22.43-10.89 48-26.93 60.65-49.24V0z"
-                opacity=".5" />
-            <path
-                d="M0 0v5.63C149.93 59 314.09 71.32 475.83 42.57c43-7.64 84.23-20.12 127.61-26.46 59-8.63 112.48 12.24 165.56 35.4C827.93 77.22 886 95.24 951.2 90c86.53-7 172.46-45.71 248.8-84.81V0z" />
-        </svg>
-    </div> -->
-    <div class="  border">
-
-    </div>
 </body>
 
 
