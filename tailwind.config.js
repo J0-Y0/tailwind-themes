@@ -21,6 +21,7 @@ module.exports = {
       // light: "#F8F9FA",
       // dark: "#343A40",
       input_dark: "#2c4558",
+      transparent_bg: "#0d1f2dcc",
 
       bg_dark: "#0D1F2D",
       text_light: "#66d6ff",
